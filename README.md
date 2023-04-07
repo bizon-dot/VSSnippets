@@ -1,1 +1,1 @@
-# SnippetPHP
+# Snippet
