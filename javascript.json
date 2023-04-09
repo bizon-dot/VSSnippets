@@ -1,0 +1,109 @@
+{
+  "FetchAPI": {
+    "prefix": "fetchapi",
+    "body": [
+      "fetch('${1:url}')",
+      ".then(response => response.json())",
+      ".then(data => console.log(data))",
+      ".catch(error => console.error('Error fetching data:', error));"
+    ],
+    "description": "Fetch data from API"
+  },
+  "AsyncFetchAPI": {
+    "prefix": "asyncfetch",
+    "body": [
+      "async function fetchData(url) {",
+      "  try {",
+      "    const response = await fetch(url);",
+      "    const data = await response.json();",
+      "    console.log(data);",
+      "  } catch (error) {",
+      "    console.error('Error fetching data:', error);",
+      "  }",
+      "}",
+      "",
+      "fetchData('${1:url}');"
+    ],
+    "description": "Fetch data from API using async/await"
+  },
+  "CreateElement": {
+    "prefix": "createelem",
+    "body": [
+      "const element = document.createElement('${1:elementTag}');",
+      "element.textContent = '${2:textContent}';",
+      "element.className = '${3:className}';",
+      "element.id = '${4:id}';",
+      "document.body.appendChild(element);"
+    ],
+    "description": "Create and append a DOM element"
+  },
+  "AddEventListener": {
+    "prefix": "addevent",
+    "body": [
+      "document.querySelector('${1:selector}').addEventListener('${2:event}', (event) => {",
+      "  console.log('Event triggered:', event);",
+      "});"
+    ],
+    "description": "Add an event listener"
+  },
+  "CreateInterval": {
+    "prefix": "interval",
+    "body": [
+      "const intervalId = setInterval(() => {",
+      "  console.log('Interval triggered');",
+      "}, ${1:1000});"
+    ],
+    "description": "Create an interval"
+  },
+  "ClearInterval": {
+    "prefix": "clearinterval",
+    "body": [
+      "clearInterval(${1:intervalId});"
+    ],
+    "description": "Clear an interval"
+  },
+  "CreateTimeout": {
+    "prefix": "timeout",
+    "body": [
+      "const timeoutId = setTimeout(() => {",
+      "  console.log('Timeout triggered');",
+      "}, ${1:1000});"
+    ],
+    "description": "Create a timeout"
+  },
+  "ClearTimeout": {
+    "prefix": "cleartimeout",
+    "body": [
+      "clearTimeout(${1:timeoutId});"
+    ],
+    "description": "Clear a timeout"
+  },
+  "LocalStorageSet": {
+    "prefix": "localset",
+    "body": [
+      "localStorage.setItem('${1:key}', '${2:value}');"
+    ],
+    "description": "Set an item in local storage"
+  },
+  "LocalStorageGet": {
+    "prefix": "localget",
+    "body": [
+      "const value = localStorage.getItem('${1:key}');"
+    ],
+    "description": "Get an item from local storage"
+  },
+  "LocalStorageRemove": {
+    "prefix": "localremove",
+    "body": [
+      "localStorage.removeItem('${1:key}');"
+    ],
+    "description": "Remove an item from local storage"
+  },
+  "LocalStorageClear": {
+    "prefix": "localclear",
+    "body": [
+      "localStorage.clear();"
+    ],
+    "description": "Clear local storage"
+  }
+}
