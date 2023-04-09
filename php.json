@@ -1,139 +1,139 @@
 {
-	"PrettyArray": {
-        "prefix": "beauty",
-        "body": [
-            "print(`<pre>`.print_r($array_data,true).`</pre>`);"
-        ],
-        "description": "Pretty print array"
-    },
-    "amime": {
-        "prefix": "amime",
-        "body": [
-            "if ($$_SERVER['REMOTE_ADDR'] == '') {",
-            " ",
-            "}"
-        ],
-        "description": "Check if IP address matches"
-    },
-    "ConnectMySQL": {
-        "prefix": "connectdb",
-        "body": [
-            "<?php",
-            "$host = 'localhost';",
-            "$db_name = 'your_db_name';",
-            "$user = 'your_db_user';",
-            "$password = 'your_db_password';",
-            "$charset = 'utf8mb4';",
-            "",
-            "$dsn = \"mysql:host=$host;dbname=$db_name;charset=$charset\";",
-            "$options = [",
-            "    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,",
-            "    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,",
-            "    PDO::ATTR_EMULATE_PREPARES => false,",
-            "];",
-            "",
-            "try {",
-            "    $pdo = new PDO($dsn, $user, $password, $options);",
-            "} catch (PDOException $e) {",
-            "    throw new PDOException($e->getMessage(), (int)$e->getCode());",
-            "}",
-            "?>"
-        ],
-        "description": "Connect to MySQL database with PDO"
-    },
-    "ExecuteSQL": {
-        "prefix": "execsql",
-        "body": [
-            "<?php",
-            "$query = 'SELECT * FROM your_table';",
-            "$stmt = $pdo->query($query);",
-            "",
-            "while ($row = $stmt->fetch()) {",
-            "    echo $row['column_name'] . '<br>';",
-            "}",
-            "?>"
-        ],
-        "description": "Execute an SQL query"
-    },
-    "ExecuteSQLWithParams": {
-        "prefix": "execsqlparam",
-        "body": [
-            "<?php",
-            "$query = 'SELECT * FROM your_table WHERE column_name = :value';",
-            "$stmt = $pdo->prepare($query);",
-            "$stmt->execute(['value' => $value]);",
-            "",
-            "while ($row = $stmt->fetch()) {",
-            "    echo $row['column_name'] . '<br>';",
-            "}",
-            "?>"
-        ],
-        "description": "Execute an SQL query with parameters"
-    },
-    "IncludePHP": {
-        "prefix": "includephp",
-        "body": [
-            "<?php",
-            "include 'path/to/your/file.php';",
-            "?>"
-        ],
-        "description": "Include a PHP file"
-    },
-    "RedirectPage": {
-        "prefix": "redirect",
-        "body": [
-            "<?php",
-            "header('Location: your_page.php');",
-            "exit;",
-            "?>"
-        ],
-        "description": "Redirect to another page"
-    },
-    "CreateSession": {
-        "prefix": "createsession",
-        "body": [
-            "<?php",
-            "session_start();",
-            "",
-            "$_SESSION['key'] = 'value';",
-            "?>"
-        ],
-        "description": "Create a session"
-    },
-	"SanitizeInput": {
-        "prefix": "sanitize",
-        "body": [
-            "<?php",
-            "function sanitizeInput($input) {",
-            "    $input = trim($input);",
-            "    $input = stripslashes($input);",
-            "    $input = htmlspecialchars($input);",
-            "    return $input;",
-            "}",
-            "?>"
-        ],
-        "description": "Sanitize an input"
-    },
-    "CreateHashedPassword": {
-        "prefix": "hashpwd",
-        "body": [
-            "<?php",
-            "$hashed_password = password_hash($password, PASSWORD_DEFAULT);",
-            "?>"
-        ],
-        "description": "Create a hashed password"
-    },
-    "VerifyHashedPassword": {
-        "prefix": "verifypwd",
-        "body": [
-            "<?php",
-            "if (password_verify($password, $hashed_password)) {",
-            "    // Password correct",
-            "} else {",
-            "    // Password incorrect",
-            "}",
-            "?>"
-        ],
-        "description": "Verify a hashed password"
-    }
+  "PrettyArray": {
+    "prefix": "beauty",
+    "body": [
+      "print(`<pre>`.print_r($array_data,true).`</pre>`);"
+    ],
+    "description": "Pretty print array"
+  },
+  "amime": {
+    "prefix": "amime",
+    "body": [
+      "if ($$_SERVER['REMOTE_ADDR'] == '') {",
+      " ",
+      "}"
+    ],
+    "description": "Check if IP address matches"
+  },
+  "ConnectMySQL": {
+    "prefix": "connectdb",
+    "body": [
+      "<?php",
+      "$host = 'localhost';",
+      "$db_name = 'your_db_name';",
+      "$user = 'your_db_user';",
+      "$password = 'your_db_password';",
+      "$charset = 'utf8mb4';",
+      "",
+      "$dsn = \"mysql:host=$host;dbname=$db_name;charset=$charset\";",
+      "$options = [",
+      "    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,",
+      "    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,",
+      "    PDO::ATTR_EMULATE_PREPARES => false,",
+      "];",
+      "",
+      "try {",
+      "    $pdo = new PDO($dsn, $user, $password, $options);",
+      "} catch (PDOException $e) {",
+      "    throw new PDOException($e->getMessage(), (int)$e->getCode());",
+      "}",
+      "?>"
+    ],
+    "description": "Connect to MySQL database with PDO"
+  },
+  "ExecuteSQL": {
+    "prefix": "execsql",
+    "body": [
+      "<?php",
+      "$query = 'SELECT * FROM your_table';",
+      "$stmt = $pdo->query($query);",
+      "",
+      "while ($row = $stmt->fetch()) {",
+      "    echo $row['column_name'] . '<br>';",
+      "}",
+      "?>"
+    ],
+    "description": "Execute an SQL query"
+  },
+  "ExecuteSQLWithParams": {
+    "prefix": "execsqlparam",
+    "body": [
+      "<?php",
+      "$query = 'SELECT * FROM your_table WHERE column_name = :value';",
+      "$stmt = $pdo->prepare($query);",
+      "$stmt->execute(['value' => $value]);",
+      "",
+      "while ($row = $stmt->fetch()) {",
+      "    echo $row['column_name'] . '<br>';",
+      "}",
+      "?>"
+    ],
+    "description": "Execute an SQL query with parameters"
+  },
+  "IncludePHP": {
+    "prefix": "includephp",
+    "body": [
+      "<?php",
+      "include 'path/to/your/file.php';",
+      "?>"
+    ],
+    "description": "Include a PHP file"
+  },
+  "RedirectPage": {
+    "prefix": "redirect",
+    "body": [
+      "<?php",
+      "header('Location: your_page.php');",
+      "exit;",
+      "?>"
+    ],
+    "description": "Redirect to another page"
+  },
+  "CreateSession": {
+    "prefix": "createsession",
+    "body": [
+      "<?php",
+      "session_start();",
+      "",
+      "$_SESSION['key'] = 'value';",
+      "?>"
+    ],
+    "description": "Create a session"
+  },
+  "SanitizeInput": {
+    "prefix": "sanitize",
+    "body": [
+      "<?php",
+      "function sanitizeInput($input) {",
+      "    $input = trim($input);",
+      "    $input = stripslashes($input);",
+      "    $input = htmlspecialchars($input);",
+      "    return $input;",
+      "}",
+      "?>"
+    ],
+    "description": "Sanitize an input"
+  },
+  "CreateHashedPassword": {
+    "prefix": "hashpwd",
+    "body": [
+      "<?php",
+      "$hashed_password = password_hash($password, PASSWORD_DEFAULT);",
+      "?>"
+    ],
+    "description": "Create a hashed password"
+  },
+  "VerifyHashedPassword": {
+    "prefix": "verifypwd",
+    "body": [
+      "<?php",
+      "if (password_verify($password, $hashed_password)) {",
+      "    // Password correct",
+      "} else {",
+      "    // Password incorrect",
+      "}",
+      "?>"
+    ],
+    "description": "Verify a hashed password"
+  }
 }
