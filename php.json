@@ -6,10 +6,10 @@
         ],
         "description": "Pretty print array"
     },
-    "iamyoucan": {
-        "prefix": "iamyc",
+    "amime": {
+        "prefix": "amime",
         "body": [
-            "if ($$_SERVER['REMOTE_ADDR'] == '93.147.145.100') {",
+            "if ($$_SERVER['REMOTE_ADDR'] == '') {",
             " ",
             "}"
         ],
