@@ -1,0 +1,92 @@
+{
+  "FlexContainer": {
+    "prefix": "flexcontainer",
+    "body": [
+      "display: flex;",
+      "flex-direction: ${1:row};",
+      "justify-content: ${2:center};",
+      "align-items: ${3:center};",
+      "flex-wrap: ${4:nowrap};"
+    ],
+    "description": "Create a flex container"
+  },
+  "GridContainer": {
+    "prefix": "gridcontainer",
+    "body": [
+      "display: grid;",
+      "grid-template-columns: repeat(${1:3}, 1fr);",
+      "grid-template-rows: repeat(${2:3}, 1fr);",
+      "grid-gap: ${3:16}px;"
+    ],
+    "description": "Create a grid container"
+  },
+  "CenterElement": {
+    "prefix": "centerelem",
+    "body": [
+      "position: absolute;",
+      "top: 50%;",
+      "left: 50%;",
+      "transform: translate(-50%, -50%);"
+    ],
+    "description": "Center an element"
+  },
+  "TextShadow": {
+    "prefix": "textshadow",
+    "body": [
+      "text-shadow: ${1:1}px ${2:1}px ${3:2}px ${4:#000000};"
+    ],
+    "description": "Add text shadow"
+  },
+  "BoxShadow": {
+    "prefix": "boxshadow",
+    "body": [
+      "box-shadow: ${1:1}px ${2:1}px ${3:2}px ${4:1}px ${5:#000000};"
+    ],
+    "description": "Add box shadow"
+  },
+  "GradientBackground": {
+    "prefix": "gradientbg",
+    "body": [
+      "background-image: linear-gradient(${1:45}deg, ${2:#ff0000} 0%, ${3:#00ff00} 50%, ${4:#0000ff} 100%);"
+    ],
+    "description": "Create a gradient background"
+  },
+  "BorderRadius": {
+    "prefix": "borderradius",
+    "body": [
+      "border-radius: ${1:4}px;"
+    ],
+    "description": "Add border radius"
+  },
+  "Transition": {
+    "prefix": "transition",
+    "body": [
+      "transition: ${1:all} ${2:0.3}s ${3:ease-in-out};"
+    ],
+    "description": "Add a transition"
+  },
+  "KeyframesAnimation": {
+    "prefix": "keyframes",
+    "body": [
+      "@keyframes ${1:animationName} {",
+      "  0% {",
+      "    ${2:transform}: ${3:scale}(1);",
+      "  }",
+      "  50% {",
+      "    ${2:transform}: ${3:scale}(1.5);",
+      "  }",
+      "  100% {",
+      "    ${2:transform}: ${3:scale}(1);",
+      "  }",
+      "}"
+    ],
+    "description": "Create a keyframes animation"
+  },
+  "Animation": {
+    "prefix": "animation",
+    "body": [
+      "animation: ${1:animationName} ${2:2}s ${3:ease-in-out} ${4:infinite};"
+    ],
+    "description": "Add an animation"
+  }
+}
